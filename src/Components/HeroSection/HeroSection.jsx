@@ -1,4 +1,4 @@
-import video from "../../../public/V.mp4";
+import video from "../../assets/V.mp4";
 export default function HeroSection() {
     return (
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -10,7 +10,7 @@ export default function HeroSection() {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover"
             >
-                <source src="/BasmahStore/V.mp4" type="video/mp4" />
+                <source src={video} type="video/mp4" />
             </video>
 
             {/* المحتوى */}

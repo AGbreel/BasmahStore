@@ -44,7 +44,7 @@ export default function Home() {
             if (product.productName?.toLowerCase().includes(searchVal.toLowerCase())) {
               return <RecentProduct key={i} product={product} />;
             }
-            return null; // لازم ترجع null لو الشرط مش متحقق
+            return null;
           })}
         </div>
       ) : (

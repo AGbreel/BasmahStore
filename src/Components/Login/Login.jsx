@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import axios from 'axios'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../../context/UserContext'
 import { motion } from "framer-motion";
 import cover from "../../assets/images/cover.png";

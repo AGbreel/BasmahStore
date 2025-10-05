@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-// import logo from "../../assets/images/logo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import { CartContext } from "../../context/CartContext";
@@ -36,7 +35,7 @@ export default function Navbar() {
       <div className="max-w-screen-xl flex items-center justify-between mx-auto px-4">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src="/logo.png" width={120} alt="Logo" />
+          <img src="/BasmahStore/logo.png" width={120} alt="Logo" />
         </Link>
 
         {/* Desktop Tabs */}

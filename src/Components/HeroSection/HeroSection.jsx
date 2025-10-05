@@ -10,7 +10,7 @@ export default function HeroSection() {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover"
             >
-                <source src={video} type="video/mp4" />
+                <source src="/BasmahStore/V.mp4" type="video/mp4" />
             </video>
 
             {/* المحتوى */}

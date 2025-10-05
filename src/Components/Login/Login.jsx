@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserContext } from '../../context/UserContext'
 import { motion } from "framer-motion";
+import cover from "../../assets/images/cover.png";
 
 export default function Login() {
 
@@ -62,7 +63,7 @@ export default function Login() {
       <div className='w-full min-h-screen p-8 xl:w-1/2 mx-auto'>
         <div className="w-40 mx-auto" style={{ perspective: "1000px" }}>
           <motion.img
-            src="/cover.png"
+            src={cover}
             alt="basmah"
             className="w-40 mx-auto"
             animate={{ rotateY: 360, rotateX: 20 }}

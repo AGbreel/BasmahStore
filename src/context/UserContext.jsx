@@ -12,7 +12,7 @@ export default function UserContextProvider({ children }) {
 
     async function getUserDetails(userId) {
         try {
-            let { data } = await axios.get(`http://basmah-lyn.runasp.net/api/Users/${userId}`);
+            let { data } = await axios.get(`https://basmah-lyn.runasp.net/api/Users/${userId}`);
             setUserDetails(data.data);
             setUserRole(data.data.role);
             

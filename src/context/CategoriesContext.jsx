@@ -12,7 +12,7 @@ export default function CategoriesContextProvider({ children }) {
     try {
       setLoading(true);
       let { data } = await axios.get(
-        "http://basmah-lyn.runasp.net/api/Categories"
+        "https://basmah-lyn.runasp.net/api/Categories"
       );
       setAllCategory(data.data);
 
@@ -32,7 +32,7 @@ export default function CategoriesContextProvider({ children }) {
       }
 
       let { data } = await axios.post(
-        "http://basmah-lyn.runasp.net/api/Categories",
+        "https://basmah-lyn.runasp.net/api/Categories",
         category,
         {
           headers: {
@@ -62,7 +62,7 @@ export default function CategoriesContextProvider({ children }) {
     try {
       setLoading(true);
       let { data } = await axios.delete(
-        `http://basmah-lyn.runasp.net/api/Categories/${categoryId}`
+        `https://basmah-lyn.runasp.net/api/Categories/${categoryId}`
       );
       getAllCategory();
 
@@ -84,7 +84,7 @@ export default function CategoriesContextProvider({ children }) {
       }
 
       let { data } = await axios.put(
-        `http://basmah-lyn.runasp.net/api/Categories/${categoryId}`,
+        `https://basmah-lyn.runasp.net/api/Categories/${categoryId}`,
         formData,
         {
           headers: {

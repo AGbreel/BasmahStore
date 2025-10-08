@@ -51,7 +51,7 @@ export default function EditCategoryModal({ open, onClose, category }) {
                     formData.append("File", values.imageFile);
 
                     const uploadRes = await axios.post(
-                        "http://basmah-lyn.runasp.net/api/Images/upload",
+                        "https://basmah-lyn.runasp.net/api/Images/upload",
                         formData,
                         {
                             headers: {

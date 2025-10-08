@@ -19,7 +19,7 @@ export default function AllUsers() {
     async function fetchUsers() {
         try {
             setLoading(true);
-            let { data } = await axios.get("http://basmah-lyn.runasp.net/api/Users");
+            let { data } = await axios.get("https://basmah-lyn.runasp.net/api/Users");
             setUsers(data.data);
             setLoading(false);
             console.log(data);

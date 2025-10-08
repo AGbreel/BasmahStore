@@ -76,7 +76,7 @@ export default function AddProductModal({ open, onClose, categories }) {
                     formData.append("File", values.imageFile);
 
                     const uploadRes = await axios.post(
-                        "http://basmah-lyn.runasp.net/api/Images/upload",
+                        "https://basmah-lyn.runasp.net/api/Images/upload",
                         formData,
                         {
                             headers: {

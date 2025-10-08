@@ -30,7 +30,7 @@ export default function WishlistContextProvider({ children }) {
     try {
       const body = { userId, productId };
       let { data } = await axios.post(
-        `http://basmah-lyn.runasp.net/api/Wishlist`,
+        `https://basmah-lyn.runasp.net/api/Wishlist`,
         body,
         { headers }
       );
@@ -47,7 +47,7 @@ export default function WishlistContextProvider({ children }) {
     try {
       setLoading(true);
       let { data } = await axios.get(
-        `http://basmah-lyn.runasp.net/api/Wishlist/${userId}`,
+        `https://basmah-lyn.runasp.net/api/Wishlist/${userId}`,
         { headers }
       );
       setWishlist(data.data);
@@ -67,7 +67,7 @@ export default function WishlistContextProvider({ children }) {
   async function removeProductFromWishlist(userId, productId) {
     try {
       await axios.delete(
-        `http://basmah-lyn.runasp.net/api/Wishlist/${userId}/${productId}`,
+        `https://basmah-lyn.runasp.net/api/Wishlist/${userId}/${productId}`,
         { headers }
       );
       toggleWishlist(productId);
@@ -82,7 +82,7 @@ export default function WishlistContextProvider({ children }) {
   async function clearUserWishlist(userId) {
     try {
       let { data } = await axios.delete(
-        `http://basmah-lyn.runasp.net/api/Wishlist/clear/${userId}`,
+        `https://basmah-lyn.runasp.net/api/Wishlist/clear/${userId}`,
         { headers }
       );
       setWishlist([]);

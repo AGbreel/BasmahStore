@@ -13,7 +13,7 @@ export default function ProductsContextProvider({ children }) {
   async function getRecentProducts() {
     setLoading(true);
     try {
-      let { data } = await axios.get("http://basmah-lyn.runasp.net/api/Products");
+      let { data } = await axios.get("https://basmah-lyn.runasp.net/api/Products");
       setProducts(data.data);
 
     } catch (err) {
@@ -27,7 +27,7 @@ export default function ProductsContextProvider({ children }) {
     setProductsByCategory([]);
     try {
       let { data } = await axios.get(
-        `http://basmah-lyn.runasp.net/api/Products/ByCategory/${categoryId}`
+        `https://basmah-lyn.runasp.net/api/Products/ByCategory/${categoryId}`
       );
       setProductsByCategory(data.data);
 
@@ -39,7 +39,7 @@ export default function ProductsContextProvider({ children }) {
   async function getProductsDetails(id) {
     try {
       let { data } = await axios.get(
-        `http://basmah-lyn.runasp.net/api/Products/${id}`
+        `https://basmah-lyn.runasp.net/api/Products/${id}`
       );
       setProductDetails(data.data);
 
@@ -58,7 +58,7 @@ export default function ProductsContextProvider({ children }) {
       }
 
       let { data } = await axios.post(
-        `http://basmah-lyn.runasp.net/api/Products`,
+        `https://basmah-lyn.runasp.net/api/Products`,
         product,
         {
           headers: {
@@ -87,7 +87,7 @@ export default function ProductsContextProvider({ children }) {
     try {
       setLoading(true);
       let { data } = await axios.delete(
-        `http://basmah-lyn.runasp.net/api/Products/${productId}`
+        `https://basmah-lyn.runasp.net/api/Products/${productId}`
       );
       getRecentProducts();
 
@@ -109,7 +109,7 @@ export default function ProductsContextProvider({ children }) {
       }
 
       let { data } = await axios.put(
-        `http://basmah-lyn.runasp.net/api/Products/${productId}`,
+        `https://basmah-lyn.runasp.net/api/Products/${productId}`,
         formData,
         {
           headers: {
@@ -139,7 +139,7 @@ export default function ProductsContextProvider({ children }) {
       }
 
       let { data } = await axios.post(
-        `http://basmah-lyn.runasp.net/api/Products/${productImage.productId}/images`,
+        `https://basmah-lyn.runasp.net/api/Products/${productImage.productId}/images`,
         productImage.imageUrl,
         {
           headers: {

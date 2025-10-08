@@ -25,7 +25,7 @@ export default function CartContextProvider({ children }) {
         quantity: quantity,
       };
 
-      let { data } = await axios.post(`http://basmah-lyn.runasp.net/api/Cart`,
+      let { data } = await axios.post(`https://basmah-lyn.runasp.net/api/Cart`,
         body,
         { headers }
       );
@@ -45,7 +45,7 @@ export default function CartContextProvider({ children }) {
     try {
       setmainLoading(true);
       let { data } = await axios.get(
-        `http://basmah-lyn.runasp.net/api/Cart/${userId}`,
+        `https://basmah-lyn.runasp.net/api/Cart/${userId}`,
         { headers }
       );
       setCart(data.data);
@@ -64,7 +64,7 @@ export default function CartContextProvider({ children }) {
         setcountLoading(true);
         setId(productId);
         let { data } = await axios.put(
-          `http://basmah-lyn.runasp.net/api/Cart/${userId}/${productId}`, count,
+          `https://basmah-lyn.runasp.net/api/Cart/${userId}/${productId}`, count,
           {
             headers: {
               "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export default function CartContextProvider({ children }) {
     try {
       setmainLoading(true);
       let { data } = await axios.delete(
-        `http://basmah-lyn.runasp.net/api/Cart/${userId}/${productId}`,
+        `https://basmah-lyn.runasp.net/api/Cart/${userId}/${productId}`,
         { headers }
       );
       setmainLoading(false);
@@ -104,7 +104,7 @@ export default function CartContextProvider({ children }) {
     try {
       setmainLoading(true);
       let { data } = await axios.delete(
-        `http://basmah-lyn.runasp.net/api/Cart/clear/${userId}`,
+        `https://basmah-lyn.runasp.net/api/Cart/clear/${userId}`,
         { headers }
       );
       setCart(null);

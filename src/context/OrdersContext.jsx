@@ -48,7 +48,7 @@ export default function OrderContextProvider({ children }) {
             };
 
             const { data } = await axios.post(
-                "http://basmah-lyn.runasp.net/api/Orders",
+                "https://basmah-lyn.runasp.net/api/Orders",
                 body,
                 { headers }
             );
@@ -66,7 +66,7 @@ export default function OrderContextProvider({ children }) {
     const fetchOrders = async () => {
         try {
             setmainLoading(true);
-            const { data } = await axios.get("http://basmah-lyn.runasp.net/api/Orders",
+            const { data } = await axios.get("https://basmah-lyn.runasp.net/api/Orders",
                 { headers }
             );
             setOrders(data.data);
@@ -83,7 +83,7 @@ export default function OrderContextProvider({ children }) {
         try {
             setmainLoading(true);
             const { data } = await axios.get(
-                `http://basmah-lyn.runasp.net/api/Orders/${orderId}`,
+                `https://basmah-lyn.runasp.net/api/Orders/${orderId}`,
                 { headers }
             );
             setOrderDetails(data.data);
@@ -99,7 +99,7 @@ export default function OrderContextProvider({ children }) {
         try {
             setLoading(true);
             let { data } = await axios.get(
-                `http://basmah-lyn.runasp.net/api/Orders/customer/${userId}`
+                `https://basmah-lyn.runasp.net/api/Orders/customer/${userId}`
             );
             setOrdersCustomer(data.data);
         } catch (err) {
@@ -113,7 +113,7 @@ export default function OrderContextProvider({ children }) {
         try {
             setmainLoading(true);
             const { data } = await axios.put(
-                `http://basmah-lyn.runasp.net/api/Orders/status`,
+                `https://basmah-lyn.runasp.net/api/Orders/status`,
                 {
                     orderId,
                     status

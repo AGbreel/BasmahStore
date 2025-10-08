@@ -17,7 +17,7 @@ export default function Register() {
   async function register(values) {
     try {
       setUserSubmit(true);
-      let { data } = await axios.post('http://basmah-lyn.runasp.net/api/Users/register', values);
+      let { data } = await axios.post('https://basmah-lyn.runasp.net/api/Users/register', values);
 
       localStorage.setItem('userToken', data.token.token);
       localStorage.setItem('userId', data.userId);
